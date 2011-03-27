@@ -1,0 +1,39 @@
+1. Make sure everyone is familiar with how madlibs work. Write a short
+example that includes a blank that gets reused on a whiteboard or
+piece of paper. Talk about what information you need to get and store
+from a user to fill out a madlib.
+
+2. Have everyone run madlibs.py with debug = False.
+
+3. Walk through the code in madlibs.py. Talk about why lists, tuples,
+and dictionaries are used in different places. Talk about
+raw_input. Add print statements to see what values variables hold at
+different points in the script.
+
+EXERCISE: at a Python prompt, write a loop that takes in raw_input and
+prints back what was entered.
+
+Review the different ways to format and print data. Talk about why
+triple-quotes are used here. Make sure everyone understands how the
+string formatting for `story` works.
+
+EXERCISE: at a Python prompt, write a miniature version of the string
+formatting done for `story` and think about how the "%s"s get filled
+in. See what happens if the number of "%s"s to fill doesn't match the
+number of strings provided. For example:
+
+>>> test = "Good %s" % ("morning",)
+>>> test
+'Good morning'
+>>> test = "Good %s, %s" % ("morning", "Jessica")
+>>> test
+'Good morning, Jessica'
+>>> test = "Good %s, %s. %s" % ("morning", "Jessica")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: not enough arguments for format string
+>>> test = "Good %s, %s. %s" % ("morning", "Jessica", "How are you?")
+>>> test
+'Good morning, Jessica. How are you?'
+
+4. Have everyone run madlibs.py with debug = True.

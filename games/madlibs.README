@@ -1,0 +1,23 @@
+Goals for this module
+=====================
+
+* Practice using lists, tuples, and dictionaries.
+
+* Practice using string formatting.
+
+* Get experience with using raw_input to prompt a user for
+  information.
+
+
+Dependencies and installation
+=============================
+
+None!
+
+
+Suggested exercises
+===================
+
+* Replace more words in the story with prompts for user input.
+
+* Create a new madlib, using the format in madlibs.py as a reference.
