@@ -1,0 +1,57 @@
+Goals for this module
+=====================
+
+* See how easy it is to programmatically gather data from social
+  websites that have APIs.
+
+* Get experience with command line option parsing.
+
+* Get experience with __name__ == "__main__" and the differences
+  between using a python file as a script and as a module.
+
+* Get experience reading other people's code.
+
+Dependencies and installation
+=============================
+
+Dependencies and installation instructions are at:
+
+http://code.google.com/p/python-twitter/
+
+Browse the source code at:
+
+http://code.google.com/p/python-twitter/source/browse/
+
+
+Suggested exercises
+===================
+
+* Customize how tweets are displayed. Look at the Status and User
+  classes for inspiration; options include the URL for the tweet, how
+  many followers the sender has, the location of the sender, and if it
+  was a retweet.
+
+* Write a new function to display tweets from all the trending
+  topics. Add a new commandline option for this function.
+
+* The code to display tweets gets re-used several times. De-duplicate
+  the code by moving it into a function and calling that function
+  instead. Example prototype:
+
+  def print_tweet(tweet):
+      """
+      tweet is an instance of twitter.Status.
+      """
+      pass
+
+* [Long] A lot of the Twitter API requires that you be
+  authenticated. Examples of actions that require authentication
+  include: posting new tweets, getting a user's followers, getting
+  private tweets from your friends, and following new people.
+
+  Set up oAuth so you can make authenticated requests.
+
+  http://dev.twitter.com/pages/auth describe how Twitter uses oAuth.
+
+  http://code.google.com/p/python-twitter/ has examples of using oAuth
+  authentication to make authenticated Twitter API requests.
