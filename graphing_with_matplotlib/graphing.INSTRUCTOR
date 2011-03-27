@@ -1,0 +1,77 @@
+1. The idea of doing computation makes some people nervous. Make it
+clear that these exercises are about displaying data more than
+computation, and that these exercises will be fun, not stressful.
+
+
+test.py
+=======
+
+2. Run test.py, and with the plot generated look at the code. Explain
+the import. Explain that when pyplot.plot is given only 1 list it
+assumes they are y-values.
+
+3. Change the plot to display lines between the data points.
+
+pyplot.plot([0, 2, 4, 8, 16, 32], "o")
+
+becomes
+
+pyplot.plot([0, 2, 4, 8, 16, 32], "o-")
+
+Change the labels, re-run the script, and note the changes in the
+figure.
+
+4. Add x-values to the data:
+
+pyplot.plot([0, 2, 4, 8, 16, 32], "o-")
+
+becomes
+
+x_values = [3, 4, 7, 20, 22, 25]
+y_values = [0, 2, 4, 8, 16, 32]
+pyplot.plot(x_values, y_values, "o-")
+
+Note how matplotlib resizes the graph to fit all the points on the
+figure for you.
+
+
+world_population.py
+===================
+
+5. Run world_population.py, and with the plot generated look at the
+code and world_population.txt. Talk about how reading from a file
+works, including: permissions (read, write, append), that readlines
+returns a list with an entry for each newline-delimited line in the
+file. Talk about how split works. Note that we are using the same
+pyplot functions from test.py.
+
+6. Read about customizing plot lines at
+http://matplotlib.sourceforge.net/api/pyplot_api.html#matplotlib.pyplot.plot
+
+Make the world population plot use a magenta, tri_down marker and a
+linewidth of 2:
+
+pyplot.plot(dates, populations, "o-")
+
+becomes
+
+pyplot.plot(dates, populations, "m1-", linewidth=2)
+
+Explain that reading documentation is an important part of figuring
+out how to use a library to do what you need.
+
+constitution.py
+===============
+
+6. Introduce the idea of letter frequency analysis and how it is used
+(e.g. in solving cryptograms).
+
+7. Run constitution.py. Note that the frequencies match our intuition
+(or at least what Wheel of Fortune tells us) about the most common
+letters in English.
+
+8. Walk through constitution.py. Note how we are reading data from a
+file this time, using read instead of readlines like in
+world_population.py. Talk about why. The bar chart generation code is
+a substantial leap in complexity: draw out a bar chart on a whiteboard
+or piece of paper and show why we put xticks at elt + width/2.

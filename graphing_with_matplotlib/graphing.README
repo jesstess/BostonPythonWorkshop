@@ -1,0 +1,49 @@
+Goals for this module
+=====================
+
+* Explore the capabilities of the matplotlib library for visualizing
+  data.
+
+* Get experience reading and parsing data from a file.
+
+
+Dependencies and installation
+=============================
+
+Matplotlib has download and installation instructions at
+http://matplotlib.sourceforge.net/users/installing.html
+
+The dependencies vary across operating
+systems. http://matplotlib.sourceforge.net/users/installing.html#build-requirements
+summarizes what you'll need for your operating system.
+
+A universal dependency is the NumPy scientific computing
+library. NumPy has download and installation instructions at
+http://numpy.scipy.org/
+
+
+Suggested exercises
+===================
+
+* Use the random module to generate random x and y values for test.py:
+  http://docs.python.org/library/random.html
+
+* In a new file, write code to plot the data in
+  life_expectancies_usa.txt. The format in this file is <year>,<male
+  life expectancy>,<female life expectancy>.
+
+  You can call pyplot.plot multiple times to draw multiple lines on
+  the same figure. For example:
+
+  pyplot.plot(my_data_1, "mo-", label="my data 1")
+  pyplot.plot(my_data_2, "bo-", "label="my data 2")
+
+  will plot my_data_1 in magenta and my_data_2 in blue on the same
+  figure.
+
+  If you supply labels for your plots, like above, pyplot.legend
+  will display a legend for you graph.
+
+* Browse the examples at
+  http://matplotlib.sourceforge.net/gallery.html to get a sense of
+  matplotlib's capabilities.
