@@ -1,0 +1,58 @@
+Goals for this module
+=====================
+
+* Get experience with SQL and querying a relational database.
+
+* Get experience using pysqlite2 to query a sqlite database from
+  within a Python script.
+
+
+Dependencies and installation
+=============================
+
+Precompiled SQLite binaries for all platforms can be found at:
+http://www.sqlite.org/download.html
+
+The pysqlite2 SQLite Python bindings have Windows executables and
+source tarballs at:
+http://code.google.com/p/pysqlite/
+
+A SQLite database dump of the Jeopardy database (jeopardy.dump) and
+tab-delimited dumps of the category and clue tables are at:
+http://mit.edu/jesstess/www/BostonPythonWorkshop/jeopardy/
+
+Once you have SQLite installed, you can create a database from
+jeopardy.dump with a command like:
+
+sqlite3 jeopardy.db < jeopardy.dump
+
+
+Suggested exercises
+===================
+
+* Modify the `Example categories` code to print both the category and
+  game number.
+
+* Modify the `Example clues` code to only print clues with an $800
+  value.
+
+* Write a script that prints 10 daily doubles and their responses. The
+  `clue` table has an `isDD` field.
+
+* Write a script that randomly chooses a category and prints clues
+  from that category. SQL supports an "ORDER BY RANDOM()" clause that
+  will return rows in a random order. For example, to randomly pick 1
+  category id you could use:
+
+  SELECT id FROM category ORDER BY RANDOM() LIMIT 1
+
+* Write a script to randomly choose a game number (the category table
+  has a `game` field) and print the categories from that game.
+
+* Read about GROUP BY and ORDER BY clauses and write a script using
+  them to print the 20 most common categories.
+
+  An example of using GROUP BY and ORDER BY to produce an ordered list
+  of counts on a generic `foo` field is:
+
+  SELECT foo, COUNT(foo) AS count FROM my_table GROUP BY foo ORDER BY count
