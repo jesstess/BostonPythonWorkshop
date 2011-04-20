@@ -1,0 +1,33 @@
+Goals for this module
+=====================
+
+* Practice using lists and manipulating strings.
+
+* Get experience with regular expressions.
+
+
+Dependencies and installation
+=============================
+
+For consistency, we'll all work on the same word list. Get words.txt from:
+http://mit.edu/jesstess/www/BostonPythonWorkshop/words/words.txt
+
+Your operating system may come with its own word lists.
+
+
+Suggested exercises
+===================
+
+* Find and print the words that start with "ee".
+
+* Find and print the words that end in "mt". How about "gry"?
+
+* Find and print the longest word that has no vowels.
+
+* Find an print the words that contain 4 or more 'l's.
+
+* Find and print the words that have all 5 vowels in alphabetical order.
+
+* Look for other interesting properties of English words in
+  http://en.wikipedia.org/wiki/English_words_with_uncommon_properties
+  and write code to find the words that have these properties.

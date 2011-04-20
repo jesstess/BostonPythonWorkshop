@@ -1,0 +1,28 @@
+1. Motivate the module by talking about some real-world situations where you
+need to do computation on words -- something computers can do much faster. Fun
+examples include finding valid Scrabble and crossword entries.
+
+2. Walk through how the words are read from a file. Explain the list
+comprehension used to get rid of the newlines on each word.
+
+3. Walk through finding all words containing 'uu'. Explain the use of 'in'.
+
+4. EXERCISE: implement finding all q without u words.
+
+5. Walk through finding all letters that never appear doubled.
+
+6. EXERCISE: implement finding all words that have no vowels.
+
+7. Walk through finding all palindromes. On paper or a white board calculate the
+bounds on the left and right slices for even- and odd-length words by hand. Then
+confirm that the Python logic matches your manual calculations.
+
+8. Introduce the idea of regular expressions and how this module just scratches
+the surface on their capabilities.
+
+9. Walk through using a regular expression to find and print all words
+containing 'uu'. Note that match()
+
+10. Walk through using a regular expression to find and print all words matching
+certain character constraints. Explain the ^ and $ anchors and what a
+. means. Encourage people to play with different patterns, drop the $, etc.
