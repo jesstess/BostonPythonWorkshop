@@ -4,12 +4,14 @@ are.
 2. Run the script, passing the --search option and a search term and
 observing the output. An on-topic example:
 
-python twitter.py --search=python
+python twitter_api.py --search=python
 
 Have the students try a few different search terms.
 
 3. Run the script, passing the --trending-topics option and observing
-the output.
+the output:
+
+python twitter_api.py --trending-topics
 
 4. Look at the search code. Explain what an API is and how we are
 using it in the search function.
@@ -58,14 +60,14 @@ conventions (-s searchterm v. --search=searchterm) and --help. Run the
 script with the --help option.
 
 Walk through the code in main, explaining how we get a user-supplied
-search term from the commandline to the search function. Explaing
+search term from the commandline to the search function. Explain
 __name__ == "__main__" and the difference between running code as a
 script and using it as a module. Make it clear that they don't have to
 understand all of this right now, and say that pattern matching is a
 fine way to extend code and start understanding how it works.
 
 9. EXERCISE: finish the stubbed user_tweets function. It takes a
-Twitter username as a parameter and should print out recent tweets for
+Twitter username as an argument and should print out recent tweets for
 that username using the GetUserTimeline function.
 
 Then copy the --search parser logic in main to add a command line
