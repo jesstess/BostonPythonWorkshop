@@ -56,6 +56,13 @@ function, re-run the effect, and see what happens.
 
 http://docs.python.org/library/random.html
 
+Experiment with these functions at a Python prompt:
+
+import random
+random.randint(0, 1)
+random.randint(0, 5)
+random.uniform(-1, 1)
+
 Then experiment with the numbers that make up the hue and re-run the
 effect:
 
