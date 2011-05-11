@@ -1,0 +1,69 @@
+1. Have everyone run and watch the effects:
+
+python run.py
+
+Note that the names of the effects are printed as they are displayed.
+
+2. Talk about the purpose of the Effect class, and classes in general. Talk
+about the purpose of the __init__ and run functions defined within Effect.
+
+3. Walk through SolidColorTest. Briefly explain HSV but defer a detailed
+explanation for a moment. Draw the wall on a piece of paper and walk through how
+the nested for loops and use of range accomplish coloring every pixel on the
+wall. Walk through simpler examples of range. Add print statements and re-run
+the effect. Talk about how set_pixel and draw are methods on Wall objects that
+we can use to do our drawing. Talk about time.sleep and note the time import at
+the top of the file.
+
+EXERCISE: change the values of hue, saturation, and value to other numbers
+between 0 and 1, and rerun just that effect with:
+
+python run.py SolidColorTest
+
+3. Explain the HSV color space. Use a picture like
+http://www.jentronics.com/NewColor/hsv.jpg
+
+4. Walk through HueTest. Explain what random.random() returns and note the
+random import at the top of the file. Explain the start_time idiom for
+controlling how long an effect runs. Explain how the hue is incremented, and
+remind people how % works.
+
+EXERCISE: change the amount by which hue is incremented and note how the effect
+changes.
+
+5. Look at and run SaturationTest and ValueTest and note their tiny differences
+from SaturationTest. How do those difference affect the colors we see?
+
+You can run just those three HSV tests with
+
+python run.py HueTest SaturationTest ValueTest
+
+6. Walk through DictionaryTest. Play with setting and getting key-value pairs in
+a dictionary at a Python prompt to remind people how they work. Explain the
+colors dictionary, and colors.keys.
+
+EXERCISE: create 3 new HSV colors, add them to the colors dictionary, and re-run
+DictionaryTest:
+
+python run.py DictionaryTest
+
+7. EXERCISE: write an effect that cycles through displaying the colors of the
+rainbow for 5 seconds, using the color dictionary. An example implementation:
+
+class SolidRainbow(Effect):
+    def run(self):
+        rainbow = [colors["red"], colors["orange"], colors["yellow"],
+                   colors["green"], colors["blue"], colors["indigo"],
+                   colors["purple"]]
+
+        start_time = time.time()
+        while time.time() - start_time < 5:
+            for color in rainbow:
+                for x in range(self.wall.width):
+                    for y in range(self.wall.height):
+                        self.wall.set_pixel(x, y, color)
+                self.wall.draw()
+                time.sleep(.25)
+
+8. Briefly explain how the code in wall.py, effects.py, and run.py work together
+to produce effects on the ColorWall.

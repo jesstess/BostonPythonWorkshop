@@ -1,0 +1,64 @@
+Goals for this module
+=====================
+
+* Practice using functions and classes.
+
+* Get experience with graphics pragramming using the Tkinter GUI
+  toolkit.
+
+
+Dependencies and installation
+=============================
+
+ColorWall lives at https://github.com/jesstess/ColorWall
+
+ColorWall depends on Tkinter which is bundled with recent Pythons on
+Windows, OS X, and some Linux distributions.
+
+To check if you have Tkinter installed, at a Python prompt execute
+
+>>> import Tkinter
+
+If you don't get any output, you have Tkinter installed. If you get an
+ImportError, install the python-tk package.
+
+
+Suggested exercises
+===================
+
+* Find and change the colors used in the Checkerboards effect, and
+  re-run the effect:
+
+python run.py Checkerboards
+
+Then change the line
+
+    if (x + y + i) % 2 == 0:
+
+to
+
+    if (x + y + i) % 3 == 0:
+
+re-run the effect, and see what changed.
+
+* Find and change the color of the columns in the Matrix effect, and
+  re-run the effect:
+
+python run.py Matrix
+
+Each column that we see on the wall corresponds to a Column
+object. Add some randomness to the color used by each column (the
+variable whose value you changed above) using the random.random
+function, re-run the effect, and see what happens.
+
+* Walk through Twinkle. Find explanations of the random.randint and
+  random.uniform functions in the online documentation:
+
+http://docs.python.org/library/random.html
+
+Then experiment with the numbers that make up the hue and re-run the
+effect:
+
+python run.py Twinkle
+
+* Write your own effects!
