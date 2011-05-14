@@ -3,11 +3,18 @@ import twitter
 import optparse
 import sys
 
+def print_safe(string):
+    """
+    Format a string for safe printing
+    """
+    return string.encode('cp437', 'xmlcharrefreplace')
+
 def print_tweet(tweet):
     """
     Format and print `tweet`.
     """
-    print "@" + tweet.GetUser().GetScreenName() + ": " + tweet.GetText()
+    print "@" + print_safe( tweet.GetUser().GetScreenName() ) +  \
+    ": " + print_safe(tweet.GetText())
 
 def search(search_term):
     """
@@ -25,7 +32,7 @@ def trending_topics():
     api = twitter.Api()
     trending_topics = api.GetTrendsCurrent()
     for topic in trending_topics:
-        print topic.name
+        print print_safe(topic.name)
 
 def user_tweets(username):
     """
@@ -92,6 +99,6 @@ def main(args):
         user_tweets(opts.username)
     elif opts.trending_tweets:
         trending_tweets()
-    
+
 if __name__ == "__main__":
     main(sys.argv[1:])
