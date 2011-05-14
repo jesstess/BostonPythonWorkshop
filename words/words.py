@@ -43,17 +43,7 @@ for word in words:
         
 # Print all words that are palindromes.
 for word in words:
-    if len(word) < 3:
-        continue
-
-    left_side = word[0:len(word) / 2]
-    if len(word) % 2:
-        # If it's an odd-length word, you don't care about the middle letter.
-        right_side = word[len(word) / 2 + 1:]
-    else:
-        right_side = word[len(word) / 2:]
-    right_side = right_side[::-1]
-    if left_side == right_side:
+    if len(word) > 1 and word == word[::-1]:
         print word
 
 # Use a regular expression to find and print all words containing 'uu'.

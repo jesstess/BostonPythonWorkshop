@@ -15,9 +15,7 @@ comprehension used to get rid of the newlines on each word.
 
 7. EXERCISE: implement finding all words that have no vowels.
 
-8. Walk through finding all palindromes. On paper or a white board calculate the
-bounds on the left and right slices for even- and odd-length words by hand. Then
-confirm that the Python logic matches your manual calculations.
+8. Walk through finding all palindromes.
 
 9. Introduce the idea of regular expressions and how this module just scratches
 the surface on their capabilities.
