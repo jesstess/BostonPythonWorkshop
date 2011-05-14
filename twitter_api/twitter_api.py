@@ -3,6 +3,9 @@ import twitter
 import optparse
 import sys
 
+def print_tweet(tweet):
+    print tweet.GetText().encode('cp437', 'xmlcharrefreplace')
+
 def search(search_term):
     """
     Print recent tweets containing `search_term`.
@@ -10,7 +13,7 @@ def search(search_term):
     api = twitter.Api()
     tweets = api.GetSearch(search_term)
     for tweet in tweets:
-        print tweet.GetText()
+        print_tweet(tweet)
 
 def trending_topics():
     """
